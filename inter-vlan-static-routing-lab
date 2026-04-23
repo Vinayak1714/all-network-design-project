@@ -1,0 +1,60 @@
+Inter-VLAN Routing & Static Routing Lab
+Overview
+
+This project demonstrates the implementation of Inter-VLAN Routing and Static Routing using Cisco Packet Tracer.
+
+The network is divided into multiple VLANs representing different departments, and communication is enabled across VLANs and routers.
+
+ Topology Description
+3 Routers connected via:
+192.168.1.0/24
+172.168.1.0/16
+3 Switches (Layer 2)
+9 End Devices (PCs)
+VLANs:
+VLAN 10 → Sales → 10.0.0.0/8
+VLAN 20 → HR → 20.0.0.0/8
+VLAN 30 → IT → 30.0.0.0/8
+
+Technologies Used
+VLAN Configuration
+Trunking (802.1Q)
+Inter-VLAN Routing (Router-on-a-Stick)
+Static Routing
+IP Addressing
+
+Configuration Summary
+Switch
+VLANs created
+Access ports assigned
+Trunk port configured toward router
+
+-Router
+Subinterfaces created using dot1Q
+Gateway IP assigned for each VLAN
+
+-Routing
+Static routes configured between routers for full connectivity
+-IP Addressing Table
+Device	IP Address	Network
+VLAN 10 Gateway	10.0.0.1	10.0.0.0/8
+VLAN 20 Gateway	20.0.0.1	20.0.0.0/8
+VLAN 30 Gateway	30.0.0.1	30.0.0.0/8
+
+Testing & Verification
+*Commands Used:
+ping
+tracert
+show ip route
+show vlan brief
+show interfaces trunk
+Results:
+Same VLAN communication successful
+Inter-VLAN communication successful
+End-to-end connectivity across routers achieved
+
+Troubleshooting Steps
+Verified VLAN assignment on switch
+Checked trunk configuration
+Confirmed correct default gateway on PCs
+Verified static routes on routers
